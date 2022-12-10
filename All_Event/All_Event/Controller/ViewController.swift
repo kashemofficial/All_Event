@@ -66,13 +66,14 @@ class ViewController: UIViewController {
         //print("cal \(calendars.count)")
         
         for calendar in calendars {
-            let oneMonthAgo = NSDate(timeIntervalSinceNow: -30*24*3600)
+            let oneMonthAgo = NSDate(timeIntervalSinceNow: -365*24*3600)
             let oneMonthAfter = NSDate(timeIntervalSinceNow: +30*24*3600)
             let predicate = eventStore.predicateForEvents(withStart: oneMonthAgo as Date, end: oneMonthAfter as Date, calendars: [calendar])
             let events = eventStore.events(matching: predicate)
             for event in events {
                 titles.append(event.title)
                 startDates.append(event.startDate! as NSDate)
+                //print("res = ",res)
                 endDates.append(event.endDate! as NSDate)
             }
         }
@@ -86,7 +87,7 @@ extension ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! EventTableViewCell
         cell.eventNameLabel.text = titles[indexPath.row]
-        //cell.startDateLabel.text = Int(String(startDates[indexPath.row]))
+        cell.startDateLabel.text = String(startDates[indexPath.row].description)
         //cell.endDateLabel.text = Int(String(endDates[indexPath.row]))
     
         return cell
