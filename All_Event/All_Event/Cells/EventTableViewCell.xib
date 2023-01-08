@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,36 +18,27 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKq-z2-xZo">
-                        <rect key="frame" x="10" y="0.0" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="5" y="10.333333333333334" width="43" height="23.333333333333329"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUC-z3-12Y">
-                        <rect key="frame" x="139" y="0.0" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAV-KX-vbB">
-                        <rect key="frame" x="268" y="0.0" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="272" y="10.333333333333334" width="43" height="23.333333333333329"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="TAV-KX-vbB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2Iy-DQ-fio"/>
-                    <constraint firstItem="YKq-z2-xZo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8Gi-Xl-b7N"/>
-                    <constraint firstAttribute="trailing" secondItem="TAV-KX-vbB" secondAttribute="trailing" constant="10" id="EDd-38-NgD"/>
-                    <constraint firstItem="YKq-z2-xZo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ePv-ek-bSQ"/>
-                    <constraint firstItem="EUC-z3-12Y" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="lFP-DE-eem"/>
-                    <constraint firstItem="EUC-z3-12Y" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="lgQ-qz-fRt"/>
+                    <constraint firstItem="YKq-z2-xZo" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5F7-JB-GdL"/>
+                    <constraint firstAttribute="trailing" secondItem="EUC-z3-12Y" secondAttribute="trailing" constant="5" id="JGi-gR-CcZ"/>
+                    <constraint firstItem="YKq-z2-xZo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="PYf-B3-oqu"/>
+                    <constraint firstItem="EUC-z3-12Y" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hAO-9O-mnP"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="endDateLabel" destination="TAV-KX-vbB" id="gbd-ZE-WBc"/>
                 <outlet property="eventNameLabel" destination="YKq-z2-xZo" id="rZb-pd-lSF"/>
                 <outlet property="startDateLabel" destination="EUC-z3-12Y" id="IKp-2Q-U6x"/>
             </connections>
